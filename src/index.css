@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    /* shadow-glass */
+    .navbar-links {
+        @apply flex relative h-24 bg-opacity-20 bg-[#979797] text-white gap-12 justify-center w-[830px] 
+            items-center text-nav z-20 rounded-tl-sm rounded-bl-sm tracking-nav font-light
+            before:w-[50%] before:h-px before:-left-[45%] before:bottom-[50%] before:bg-bluish-gray before:absolute before:z-20  before:opacity-50
+            /* no other way */ 
+            after:blur-md after:bg-[#979797] after:-z-10 after:absolute after:top-0 after:right-0 
+            after:left-0 after:bottom-0 after:h-24  after:w-[830px] after:opacity-20 
+    }
+    .home-main-button{
+        @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
+        before:opacity-10 before:hover:bg-white before:-top-[3.5rem] before:bottom-0 before:right-0  before:-left-[3.5rem] before:rounded-full before:absolute before:w-[24rem] before:h-[24rem]
+        
+    }
+}
