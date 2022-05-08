@@ -35,9 +35,10 @@ module.exports = {
         'head-5': '4.75px',
         'nav': '2.7px',
         'subhead-2': '2.35px',
-
       },
-      
+      animation: {
+        'spin-slow': 'spin 60s linear infinite',
+      }
     },
   },
   plugins: [],

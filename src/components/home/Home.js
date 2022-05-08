@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import backgroundHeroDesktop from '../../assets/home/background-home-desktop.jpg'
 import backgroundHeroTablet from '../../assets/home/background-home-tablet.jpg'
@@ -7,7 +7,6 @@ import '../../index.css'
 
 function Home(){
     //variables
-    const navigate = useNavigate();
     const { display } = useSelector(state => state.findWidth)
     // functions
     const fittingImg = () => {
@@ -26,10 +25,13 @@ function Home(){
     const imgStyle = {
         backgroundImage: `url(${fittingImg()})`,
         backgroundSize: '100% 100%',
+        position: 'absolute',
+        right: '0',
+        left: '0',
+
     }
     return(
-        <main className='bg-no-repeat w-full backdrop-blur-lg h-full pt-[22rem] flex items-center 
-        justify-between px-36 font-main pb-40' style={imgStyle}>
+        <main className='bg-no-repeat w-full h-full page-responsive-padding flex items-center justify-between font-main' style={imgStyle}>
             <div className='text-white flex flex-col gap-4'>
                 <h5 className='text-head-5 text-bluish-gray tracking-head-5 '>
                     SO, YOU WANT TO TRAVEL TO
@@ -41,13 +43,15 @@ function Home(){
                     give you a truly out of this world experience!
                 </p>
             </div>
-            <div className='home-main-button'>
+            <Link to='/destinations' className='home-main-button'>
                 <div className='w-[274px] h-[274px] flex items-center justify-center'>
-                    <span className='uppercase text-very-dark-blue text-subhead-1 tracking-subhead-2'>
+                    < span
+                        className='uppercase text-very-dark-blue text-subhead-1 tracking-subhead-2'
+                    >
                         Explore
                     </span>
                 </div>
-            </div>
+            </Link>
         </main>
     )
 }
