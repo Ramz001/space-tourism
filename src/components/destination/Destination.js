@@ -41,11 +41,11 @@ function Destination(){
 
     return (
         <article 
-        className="font-text lg:pt-[10rem] desktop:pt-[12rem] 2xl:pt-[14rem] lg:pb-[8rem] desktop:pb-[10rem] 2xl:pb-[11rem] px-36 h-auto" 
+        className="font-text lg:pt-[10rem] desktop:pt-[12.5rem] lg:pb-[8rem] desktop:pb-[10rem] 2xl:pb-[11rem] px-32 h-auto" 
         style={imgStyle}
         >
-            <h2 className='text-white tracking-head-5 text-head-5 mb-16 uppercase'>
-                <span className='text-white opacity-25 font-bold tracking-subhead-2 '>01 </span> 
+            <h2 className='page-intro-header mb-16'>
+                <span className='page-intro-header-number'>01 </span> 
                 Pick Your Destination
             </h2>
             <div className='flex justify-center gap-40 items-center'>

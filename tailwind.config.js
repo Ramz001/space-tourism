@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         'main': 'Bellefair, sans-serif',
-        'text': 'Barlow, sans-serif',
+        'text': 'Barlow Condensed, sans-serif',
       },
       fontSize:{
         'subhead-2': ['14px','16.8px'],
