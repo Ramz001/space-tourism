@@ -21,26 +21,26 @@ const Navbar = () => {
       <img src={logo} alt="logo" className="ml-10 mt-8 tablet:ml-14" />
       { display !== 'mobile' &&
         <div className="navbar-links font-main">
-          <NavLink to="/" className={({ isActive }) => handleIsActive(isActive)}>
+          <NavLink to="/space-tourism/" className={({ isActive }) => handleIsActive(isActive)}>
             <span className="font-extrabold hidden xl:inline-block">00 </span>
             Home
           </NavLink>
           <NavLink
-            to="/destinations"
+            to="/space-tourism/destinations"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">01 </span>
             Destinations
           </NavLink>
           <NavLink
-            to="/crew"
+            to="/space-tourism/crew"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">02 </span>
             Crew
           </NavLink>
           <NavLink
-            to="/technology"
+            to="/space-tourism/technology"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">03 </span>

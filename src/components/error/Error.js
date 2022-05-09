@@ -9,7 +9,7 @@ function Error() {
         Page Not Found
       </h3>
       <Link
-        to="/"
+        to="/space-tourism"
         className="px-8 py-4 group bg-slate-700 rounded-md hover:bg-opacity-75"
       >
         <span className="text-white group-hover:text-blue-500">Go Home</span>

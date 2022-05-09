@@ -28,24 +28,24 @@ export default function MobileNavbar(){
                         className='w-5 h-5 flex self-end cursor-pointer mt-8'
                         onClick={() => dispatch(toggleHamburger())}
                     />
-                    <NavLink to="/" >
+                    <NavLink to="/space-tourism/" >
                         <span className="font-bold">00 </span>
                         Home
                     </NavLink>
                     <NavLink
-                        to="/destinations"
+                        to="/space-tourism/destinations"
                     >
                         <span className="font-bold">01 </span>
                         Destinations
                     </NavLink>
                     <NavLink
-                        to="/crew"
+                        to="/space-tourism/crew"
                     >
                         <span className="font-bold">02 </span>
                         Crew
                     </NavLink>
                     <NavLink
-                        to="/technology"
+                        to="/space-tourism/technology"
                     >
                         <span className="font-bold">03 </span>
                         Technology
