@@ -18,10 +18,10 @@ module.exports = {
         'text': 'Barlow Condensed, sans-serif',
       },
       fontSize:{
-        'subhead-2': ['14px','16.8px'],
         'nav': ['16px','19.2px'],
         'body-text': ['18px','32px'],
         'subhead-1': ['28px','32px'],
+        'subhead-2': ['14px','16.8px'],
         'head-1': ['150px','171.9px'],
         'head-2': ['100px','114.6px'],
         'head-3': ['56px','64,2px'],

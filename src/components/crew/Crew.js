@@ -42,21 +42,21 @@ function Crew() {
 
   return (
     <main
-      className="lg:pt-[10rem] desktop:pt-[12.5rem] px-32 h-auto"
+      className="pt-[10rem] desktop:pt-[12.5rem] px-10 xl:px-32 h-auto"
       style={imgStyle}
     >
-      <h2 className="page-intro-header">
+      <h2 className="page-intro-header mb-16 xl:mb-0">
         <span className="page-intro-header-number">02 </span>
         Meet your crew
       </h2>
-      <article className="flex justify-center h-[75vh] text-white">
-        <div className="flex flex-col justify-evenly w-[57.5%]">
-          <div className="mb-8 font-main">
+      <article className="flex flex-col xl:flex-row items-center xl:items-start justify-center  xl:h-[75vh] text-white">
+        <div className="flex flex-col justify-evenly items-center xl:items-start xl:w-[57.5%]">
+          <div className="mb-8 font-main text-center xl:text-left">
             <h4 className="text-white opacity-30 text-head-4 uppercase">
               {job}
             </h4>
             <h3 className="text-head-3  select-all uppercase">{name}</h3>
-            <p className="text-body-text font-text mt-4 text-bluish-gray max-w-lg">
+            <p className="text-body-text font-text mt-4 text-bluish-gray xl:max-w-lg">
               {description}
             </p>
           </div>
@@ -79,7 +79,7 @@ function Crew() {
             />
           </div>
         </div>
-        <img src={image} alt={job + " " + name} className="w-[42.5%]" />
+        <img src={image} alt={job + " " + name} className="xl:w-[42.5%] w-3/5" />
       </article>
     </main>
   );

@@ -43,16 +43,16 @@ function Technology() {
 
   return (
     <main
-      className=" lg:pt-[10rem] desktop:pt-[12rem]  lg:pb-[2rem] pl-32"
+      className="pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
       style={imgStyle}
     >
-      <h2 className="page-intro-header ">
+      <h2 className="page-intro-header mb-12 ml-10 xl:ml-0 xl:mb-0">
         <span className="page-intro-header-number">03 </span>
         Space Launch 101
       </h2>
-      <article className="flex text-white items-center h-[80vh]">
-        <div className="flex w-3/5">
-          <div className="flex flex-col gap-10">
+      <article className="flex flex-col xl:flex-row text-white justify-center xl:justify-start items-center xl:h-[80vh]">
+        <div className="flex w-full items-center flex-col xl:flex-row xl:w-3/5 xl:order-1 order-2">
+          <div className="flex xl:flex-col xl:gap-10 gap-16 xl:my-0 my-12">
             <button
               className={`technology-btn ${bntStyle(0)}`}
               onClick={() => dispatch(setCurrentTechnology(0))}
@@ -72,7 +72,7 @@ function Technology() {
               3
             </button>
           </div>
-          <article className="font-main ml-16">
+          <article className="font-main xl:ml-16 text-center xl:text-left mb-20 xl:mb-0">
             <p className="text-nav text-bluish-gray uppercase">
               The Terminology...
             </p>
@@ -82,7 +82,7 @@ function Technology() {
             </p>
           </article>
         </div>
-        <img src={image(imageType)} alt={title} className="w-2/5" />
+        <img src={image(imageType)} alt={title} className="w-full xl:w-2/5 order-1 xl:order-2" />
       </article>
     </main>
   );

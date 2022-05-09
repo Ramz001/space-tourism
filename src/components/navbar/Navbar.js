@@ -12,33 +12,33 @@ const Navbar = () => {
   return (
     <nav
       className="flex uppercase items-center justify-between z-10 
-        top-0 left-0 right-0 mt-8 fixed"
+        top-0 left-0 right-0 xl:mt-8 fixed"
     >
       <img src={logo} alt="logo" className="ml-14" />
       <div className="navbar-links font-main">
         <NavLink to="/" className={({ isActive }) => handleIsActive(isActive)}>
-          <span className="font-extrabold ">00 </span>
+          <span className="font-extrabold hidden xl:inline-block">00 </span>
           Home
         </NavLink>
         <NavLink
           to="/destinations"
           className={({ isActive }) => handleIsActive(isActive)}
         >
-          <span className="font-extrabold ">01 </span>
+          <span className="font-extrabold hidden xl:inline-block">01 </span>
           Destinations
         </NavLink>
         <NavLink
           to="/crew"
           className={({ isActive }) => handleIsActive(isActive)}
         >
-          <span className="font-extrabold ">02 </span>
+          <span className="font-extrabold hidden xl:inline-block">02 </span>
           Crew
         </NavLink>
         <NavLink
           to="/technology"
           className={({ isActive }) => handleIsActive(isActive)}
         >
-          <span className="font-extrabold ">03 </span>
+          <span className="font-extrabold hidden xl:inline-block">03 </span>
           Technology
         </NavLink>
       </div>

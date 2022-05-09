@@ -30,7 +30,7 @@ function Destination() {
     backgroundSize: "cover",
     position: "absolute",
     right: "0",
-    left: "0",
+    left: "0", 
   };
 
   const { title, description, image, estimatedTravelTime, averageDistance } =
@@ -43,22 +43,23 @@ function Destination() {
 
   return (
     <main
-      className="font-text lg:pt-[10rem] desktop:pt-[12.5rem] lg:pb-[8rem] desktop:pb-[10rem] 2xl:pb-[11rem] px-32 h-auto"
+      className="font-text pt-[10rem] pb-[6rem] desktop:pt-[12.5rem] lg:pb-[8rem] 
+      desktop:pb-[10rem] 2xl:pb-[11rem] px-8 xl:px-32 "
       style={imgStyle}
     >
       <h2 className="page-intro-header mb-16">
         <span className="page-intro-header-number">01 </span>
         Pick Your Destination
       </h2>
-      <div className="flex justify-center gap-40 items-center">
+      <div className="flex xl:flex-row flex-col justify-center gap-16 xl:gap-40 items-center px-20 xl:px-0">
         <img
-          className="animate-spin-slow w-2/5 h-2/5"
+          className="animate-spin-slow w-3/5 h-3/5 xl:w-2/5 xl:h-2/5"
           src={image}
           alt={title}
         ></img>
-        <div className="text-white flex flex-col justify-between gap-2">
+        <div className="text-white flex flex-col items-center xl:items-start justify-between gap-2">
           <div
-            className="flex gap-10 text-nav text-bluish-gray 
+            className="flex justify-center xl:justify-start gap-10 text-nav text-bluish-gray 
                     tracking-nav uppercase opacity-75 mb-8 h-auto"
           >
             <div
@@ -89,11 +90,11 @@ function Destination() {
           <h3 className="text-head-2 uppercase font-main">{title}</h3>
           <p
             className="max-w-lg pb-8 text-body-text font-text text-bluish-gray border-b 
-                    border-opacity-50 border-bluish-gray mb-4"
+                    border-opacity-50 border-bluish-gray mb-4 text-center xl:text-left"
           >
             {description}
           </p>
-          <div className="grid grid-cols-2 grid-rows-2">
+          <div className="grid grid-cols-2 grid-rows-2 xl:gap-0 gap-x-24">
             <span className="uppercase text-subhead-2 text-bluish-gray font-main">
               avg. distance
             </span>
