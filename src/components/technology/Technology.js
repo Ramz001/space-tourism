@@ -43,10 +43,10 @@ function Technology() {
 
   return (
     <main
-      className="pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
+      className="pt-[8rem] tablet:pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
       style={imgStyle}
     >
-      <h2 className="page-intro-header mb-12 ml-10 xl:ml-0 xl:mb-0">
+      <h2 className="page-intro-header mb-8 tablet:mb-12 tablet:ml-10 xl:ml-0 xl:mb-0">
         <span className="page-intro-header-number">03 </span>
         Space Launch 101
       </h2>
@@ -73,11 +73,11 @@ function Technology() {
             </button>
           </div>
           <article className="font-main xl:ml-16 text-center xl:text-left mb-20 xl:mb-0">
-            <p className="text-nav text-bluish-gray uppercase">
+            <p className="text-nav text-bluish-gray uppercase mb-2">
               The Terminology...
             </p>
-            <h3 className="uppercase text-head-3">{title}</h3>
-            <p className="max-w-md font-text text-body-text text-bluish-gray">
+            <h3 className="uppercase text-head-4 mb-4 tablet:mb-0 tablet:text-head-3">{title}</h3>
+            <p className="max-w-md font-text px-4 tablet:px-0 text-body-text text-bluish-gray">
               {description}
             </p>
           </article>

@@ -47,13 +47,13 @@ function Destination() {
       desktop:pb-[10rem] 2xl:pb-[11rem] px-8 xl:px-32 "
       style={imgStyle}
     >
-      <h2 className="page-intro-header mb-16">
+      <h2 className="page-intro-header mb-8 tablet:mb-16">
         <span className="page-intro-header-number">01 </span>
         Pick Your Destination
       </h2>
       <div className="flex xl:flex-row flex-col justify-center gap-16 xl:gap-40 items-center px-20 xl:px-0">
         <img
-          className="animate-spin-slow w-3/5 h-3/5 xl:w-2/5 xl:h-2/5"
+          className="animate-spin-slow w-full h-full tablet:w-3/5 tablet:h-3/5 xl:w-2/5 xl:h-2/5"
           src={image}
           alt={title}
         ></img>
@@ -87,22 +87,26 @@ function Destination() {
               Titan
             </div>
           </div>
-          <h3 className="text-head-2 uppercase font-main">{title}</h3>
+          <h3 className="text-head-3 tablet:text-head-2 uppercase font-main">{title}</h3>
           <p
             className="max-w-lg pb-8 text-body-text font-text text-bluish-gray border-b 
                     border-opacity-50 border-bluish-gray mb-4 text-center xl:text-left"
           >
             {description}
           </p>
-          <div className="grid grid-cols-2 grid-rows-2 xl:gap-0 gap-x-24">
-            <span className="uppercase text-subhead-2 text-bluish-gray font-main">
-              avg. distance
-            </span>
-            <span className="uppercase text-subhead-2 text-bluish-gray font-main">
-              est. travel time
-            </span>
-            <span className="text-subhead-1">{averageDistance}</span>
-            <span className="text-subhead-1">{estimatedTravelTime}</span>
+          <div className="flex tablet:flex-row flex-col gap-y-12 tablet:gap-y-0 gap-x-24">
+            <div className="flex flex-col gap-2 items-center">
+              <span className="uppercase text-subhead-2 text-bluish-gray font-main">
+                avg. distance
+              </span>
+              <span className="text-head-4">{averageDistance}</span>
+            </div>
+            <div className="flex flex-col gap-2 items-center">
+              <span className="uppercase text-subhead-2 text-bluish-gray font-main">
+                est. travel time
+              </span>
+              <span className="text-head-4">{estimatedTravelTime}</span>
+            </div>
           </div>
         </div>
       </div>

@@ -42,25 +42,27 @@ function Crew() {
 
   return (
     <main
-      className="pt-[10rem] desktop:pt-[12.5rem] px-10 xl:px-32 h-auto"
+      className="pt-[8rem] sm:pt-[10rem] desktop:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
       style={imgStyle}
     >
       <h2 className="page-intro-header mb-16 xl:mb-0">
         <span className="page-intro-header-number">02 </span>
         Meet your crew
       </h2>
-      <article className="flex flex-col xl:flex-row items-center xl:items-start justify-center  xl:h-[75vh] text-white">
-        <div className="flex flex-col justify-evenly items-center xl:items-start xl:w-[57.5%]">
-          <div className="mb-8 font-main text-center xl:text-left">
-            <h4 className="text-white opacity-30 text-head-4 uppercase">
+      <article className="flex flex-col xl:flex-row items-center xl:items-start justify-center
+       xl:h-[75vh] text-white">
+        <div className="flex flex-col justify-evenly items-center xl:items-start xl:w-[57.5%] order-2 tablet:order-1">
+          <div className="mb-8 font-main text-center xl:text-left order-2 tablet:order-1">
+            <h4 className="text-white mb-4 xl:mb-0 opacity-50 text-nav tablet:text-head-4 
+            uppercase">
               {job}
             </h4>
-            <h3 className="text-head-3  select-all uppercase">{name}</h3>
+            <h3 className="text-head-5 tablet:text-head-3 select-all uppercase">{name}</h3>
             <p className="text-body-text font-text mt-4 text-bluish-gray xl:max-w-lg">
               {description}
             </p>
           </div>
-          <div className="mb-16 flex gap-8">
+          <div className="tablet:mb-16 my-8 tablet:my-0 flex gap-8 order-1 tablet:order-2">
             <button
               className={`w-3 h-3 rounded-full ${personBtnStyle(0)}`}
               onClick={() => dispatch(setCurrentPerson(0))}
@@ -79,7 +81,10 @@ function Crew() {
             />
           </div>
         </div>
-        <img src={image} alt={job + " " + name} className="xl:w-[42.5%] w-3/5" />
+        <img 
+          src={image} alt={job + " " + name}
+          className="xl:w-[42.5%] w-3/4 sm:w-3/5 order-1 tablet:order-2 border-b border-white border-opacity-50 tablet:border-none"  
+          />
       </article>
     </main>
   );

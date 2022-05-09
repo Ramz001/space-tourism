@@ -9,7 +9,6 @@
     @apply flex relative h-24 bg-opacity-20 bg-[#979797] text-white gap-6 xl:gap-12 justify-center 
     w-[450px] lg:w-[650px] xl:w-[830px]
     items-center text-subhead-2 xl:text-nav z-10 rounded-tl-sm rounded-bl-sm xl:tracking-nav 
-    
     xl:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
     xl:before:bg-bluish-gray xl:before:absolute xl:before:z-20 
     xl:before:opacity-50
@@ -22,21 +21,22 @@
   }
   .home-main-button {
     @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
-        before:opacity-10 before:hover:bg-white before:-top-[3.5rem] before:bottom-0 before:right-0  before:-left-[3.5rem] before:rounded-full before:absolute before:w-[24rem] before:h-[24rem]
+        before:opacity-10 before:hover:bg-white before:-top-[3.5rem] before:bottom-0 
+        before:right-0  before:-left-[3.5rem] before:rounded-full before:absolute 
+        before:w-[20rem] before:h-[20rem] tablet:before:w-[24rem] tablet:before:h-[24rem]
         before:transition before:ease-out before:duration-500;
   }
   .destination-btn {
     @apply pb-2 cursor-pointer select-none;
   }
   .page-intro-header {
-    @apply text-white tracking-head-5 text-subhead-1 font-text uppercase;
+    @apply text-white tracking-head-5 text-center tablet:text-left text-nav tablet:text-subhead-1 font-text uppercase;
   }
   .page-intro-header-number {
     @apply opacity-25 font-bold tracking-head-5;
   }
   .technology-btn {
-    @apply rounded-full w-16 h-16 text-subhead-1 font-main border-2 border-white border-opacity-40
-        hover:border-opacity-100 transition ease-out duration-300;
+    @apply rounded-full w-12 h-12 tablet:w-16 tablet:h-16 text-subhead-1 font-main border-2 border-white border-opacity-40 hover:border-opacity-100 transition ease-out duration-300;
   }
   img,
   div {
