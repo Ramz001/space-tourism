@@ -1,20 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    currentTechnology: 0
-}
+  currentTechnology: 0,
+};
 
 const currentTechnologySlice = createSlice({
-    name: "currentTechnology",
-    initialState,
-    reducers: {
-        setCurrentTechnology: (state, action) => {
-            state.currentTechnology = action.payload
-        }
-    }
-})
+  name: "currentTechnology",
+  initialState,
+  reducers: {
+    setCurrentTechnology: (state, action) => {
+      state.currentTechnology = action.payload;
+    },
+  },
+});
 
+export const { setCurrentTechnology } = currentTechnologySlice.actions;
 
-export const { setCurrentTechnology } = currentTechnologySlice.actions
-
-export default currentTechnologySlice.reducer
+export default currentTechnologySlice.reducer;

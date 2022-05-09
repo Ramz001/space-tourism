@@ -1,33 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    /* shadow-glass */
-    .navbar-links {
-        @apply flex relative h-24 bg-opacity-20 bg-[#979797] text-white gap-12 justify-center w-[830px] 
+@layer components {
+  /* shadow-glass */
+  .navbar-links {
+    @apply flex relative h-24 bg-opacity-20 bg-[#979797] text-white gap-12 justify-center xl:w-[830px] tablet:w-[640px] 
             items-center text-nav z-10 rounded-tl-sm rounded-bl-sm tracking-nav 
-            before:w-[50%] before:h-px before:-left-[45%] before:bottom-[50%] before:bg-bluish-gray before:absolute before:z-20  before:opacity-50
+            
+            xl:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
+            xl:before:bg-bluish-gray xl:before:absolute xl:before:z-20 
+            xl:before:opacity-50
             /* no other way */ 
             after:blur-md after:bg-[#979797] after:-z-10 after:absolute after:top-0 after:right-0 
-            after:left-0 after:bottom-0 after:h-24  after:w-[830px] after:opacity-20 
-    }
-    .home-main-button{
-        @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
+            after:left-0 after:bottom-0 after:h-24 after:w-[830px] after:opacity-20;
+  }
+  .nav-link {
+    @apply relative before:rounded-md before:left-0 before:right-0 before:-bottom-[2.3rem] 
+        before:absolute before:w-auto before:transition before:ease-out before:duration-300;
+  }
+  .home-main-button {
+    @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
         before:opacity-10 before:hover:bg-white before:-top-[3.5rem] before:bottom-0 before:right-0  before:-left-[3.5rem] before:rounded-full before:absolute before:w-[24rem] before:h-[24rem]
-    }
-    .page-responsive-padding{
-        @apply lg:pt-[14rem] desktop:pt-[15rem] lg:pb-[8rem] px-32
-    }
-    .page-intro-header{
-        @apply text-white tracking-head-5 text-subhead-1 font-text uppercase
-    }
-    .page-intro-header-number{
-        @apply opacity-25 font-bold tracking-head-5
-    }
-    img, div {
-        -webkit-tap-highlight-color: transparent;
-    }
+        before:transition before:ease-out before:duration-500;
+  }
+  .destination-btn {
+    @apply pb-2 cursor-pointer select-none;
+  }
+  .page-intro-header {
+    @apply text-white tracking-head-5 text-subhead-1 font-text uppercase;
+  }
+  .page-intro-header-number {
+    @apply opacity-25 font-bold tracking-head-5;
+  }
+  .technology-btn {
+    @apply rounded-full w-16 h-16 text-subhead-1 font-main border-2 border-white border-opacity-40
+        hover:border-opacity-100 transition ease-out duration-300;
+  }
+  img,
+  div {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

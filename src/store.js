@@ -5,12 +5,12 @@ import currentPersonReducer from "./features/currentPersonSlice";
 import currentTechnologyReducer from "./features/currentTechnologySlice";
 
 const store = configureStore({
-    reducer:{
-        findWidth: findWidthReducer,
-        currentPlanet: currentPlanetReducer,
-        currentPerson: currentPersonReducer,
-        currentTechnology: currentTechnologyReducer
-    }
-})
+  reducer: {
+    findWidth: findWidthReducer,
+    currentPlanet: currentPlanetReducer,
+    currentPerson: currentPersonReducer,
+    currentTechnology: currentTechnologyReducer,
+  },
+});
 
 export default store;
