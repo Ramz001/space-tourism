@@ -21,10 +21,10 @@
   }
   .home-main-button {
     @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
-        before:opacity-10 before:hover:bg-white before:-top-[3.5rem] before:bottom-0 
-        before:right-0  before:-left-[3.5rem] before:rounded-full before:absolute 
-        before:w-[20rem] before:h-[20rem] tablet:before:w-[24rem] tablet:before:h-[24rem]
-        before:transition before:ease-out before:duration-500;
+        before:opacity-10 before:hover:bg-white before:-top-[2.5rem] tablet:before:-top-[3.5rem] 
+        before:bottom-0 before:right-0  before:-left-[2.5rem] tablet:before:-left-[3.5rem] 
+        before:rounded-full before:absolute before:w-[20rem] before:h-[20rem] tablet:before:w-[24rem] 
+        tablet:before:h-[24rem] before:transition before:ease-out before:duration-500;
   }
   .destination-btn {
     @apply pb-2 cursor-pointer select-none;
