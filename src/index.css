@@ -19,6 +19,10 @@
     @apply relative before:rounded-md before:left-0 before:right-0 before:-bottom-[2.3rem] 
         before:absolute before:w-auto before:transition before:ease-out before:duration-300;
   }
+  .nav-link-mobile{
+    @apply relative before:rounded-md before:-right-[2.3rem] before:top-0 before:bottom-0 before:absolute 
+      before:h-auto before:transition before:ease-out before:duration-300 before:w-1 before:z-50 before:bg-white;
+  }
   .home-main-button {
     @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
         before:opacity-10 before:hover:bg-white before:-top-[2.5rem] tablet:before:-top-[3.5rem] 

@@ -7,7 +7,7 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   const { display } = useSelector((state) => state.findWidth);
   const { isOpen } = useSelector((state) => state.hamburger);
-  const navUnderlineActive = "before:bg-white  before:h-1 nav-link";
+  const navUnderlineActive = "before:bg-white before:h-1 nav-link";
   const navUnderlineDeactive =
     "hover:before:bg-white hover:before:h-1 hover:before:bg-opacity-25 nav-link";
   const handleIsActive = (isActive) =>

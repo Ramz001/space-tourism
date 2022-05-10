@@ -9,6 +9,11 @@ export default function MobileNavbar() {
   const { isOpen } = useSelector((state) => state.hamburger);
   const dispatch = useDispatch();
 
+  const navUnderlineActive = "before:bg-white before:w-1 nav-link-mobile";
+  const navUnderlineDeactive =
+    "hover:before:bg-white before:w-1 before:bg-white before:bg-opacity-25 hover:before:bg-opacity-75 nav-link-mobile";
+  const handleIsActive = (isActive) =>
+    isActive ? navUnderlineActive : navUnderlineDeactive;
   return (
     <>
       {!isOpen && (
@@ -30,19 +35,31 @@ export default function MobileNavbar() {
             className="w-5 h-5 flex self-end cursor-pointer mt-8"
             onClick={() => dispatch(toggleHamburger())}
           />
-          <NavLink to="/space-tourism/">
+          <NavLink 
+            to="/space-tourism/"
+            className={({ isActive }) => handleIsActive(isActive)}
+            >
             <span className="font-bold">00 </span>
             Home
           </NavLink>
-          <NavLink to="/space-tourism/destinations">
+          <NavLink 
+            to="/space-tourism/destinations"
+            className={({ isActive }) => handleIsActive(isActive)}
+            >
             <span className="font-bold">01 </span>
             Destinations
           </NavLink>
-          <NavLink to="/space-tourism/crew">
+          <NavLink 
+            to="/space-tourism/crew"
+            className={({ isActive }) => handleIsActive(isActive)}
+            >
             <span className="font-bold">02 </span>
             Crew
           </NavLink>
-          <NavLink to="/space-tourism/technology">
+          <NavLink 
+            to="/space-tourism/technology"
+            className={({ isActive }) => handleIsActive(isActive)}
+            >
             <span className="font-bold">03 </span>
             Technology
           </NavLink>
