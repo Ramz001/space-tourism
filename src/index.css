@@ -21,7 +21,7 @@
   }
   .nav-link-mobile{
     @apply relative before:rounded-md before:-right-[2.3rem] before:top-0 before:bottom-0 before:absolute 
-      before:h-auto before:transition before:ease-out before:duration-300 before:w-1 before:z-50 before:bg-white;
+      before:h-auto before:transition before:ease-out before:duration-300 before:w-1 before:z-50 ;
   }
   .home-main-button {
     @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 

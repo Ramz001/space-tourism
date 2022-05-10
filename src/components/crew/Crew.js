@@ -42,7 +42,7 @@ function Crew() {
 
   return (
     <main
-      className="pt-[8rem] pb-20 desktop:pb-0 sm:pt-[10rem] desktop:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
+      className="pt-[8rem] pb-20 xl:pb-0 sm:pt-[10rem] desktop:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
       style={imgStyle}
     >
       <h2 className="page-intro-header mb-8 ">
