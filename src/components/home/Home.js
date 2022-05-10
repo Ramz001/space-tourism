@@ -31,8 +31,8 @@ function Home() {
   };
   return (
     <main
-      className="bg-no-repeat pb-16 desktop:pt-[15rem] pt-[12rem] tablet:pt-[14rem] 
-      tablet:pb-[8rem] px-4 tablet:px-32 flex flex-col xl:flex-row items-center 
+      className="bg-no-repeat pb-20 xl:pt-[20rem] desktop:pt-[25rem] pt-[12rem] tablet:pt-[14rem] 
+      tablet:pb-[7rem] xl:pb-[8rem] desktop:pb-[12rem] px-4 tablet:px-32 flex flex-col xl:flex-row items-center 
       xl:justify-between font-main gap-12 tablet:gap-24 xl:gap-0"
       style={imgStyle}
     >

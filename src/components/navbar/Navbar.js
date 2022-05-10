@@ -20,7 +20,7 @@ const Navbar = () => {
       } justify-between z-10 
         top-0 left-0 right-0 xl:mt-8 fixed tablet:mx-0`}
     >
-      <img src={logo} alt="logo" className="ml-10 mt-8 tablet:ml-14" />
+      <img src={logo} alt="logo" className="ml-10 mt-8 xl:mt-0 tablet:ml-14" />
       {(display === "tablet" || display === "desktop") && (
         <div className="navbar-links font-main">
           <NavLink
