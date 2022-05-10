@@ -42,22 +42,28 @@ function Crew() {
 
   return (
     <main
-      className="pt-[8rem] sm:pt-[10rem] desktop:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
+      className="pt-[8rem] pb-20 desktop:pb-0 sm:pt-[10rem] desktop:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
       style={imgStyle}
     >
       <h2 className="page-intro-header mb-8 ">
         <span className="page-intro-header-number">02 </span>
         Meet your crew
       </h2>
-      <article className="flex flex-col xl:flex-row items-center justify-center
-        text-white">
+      <article
+        className="flex flex-col xl:flex-row items-center justify-center
+        text-white"
+      >
         <div className="flex flex-col justify-evenly items-center xl:items-start xl:w-[57.5%] order-2 tablet:order-1">
           <div className="mb-8 font-main text-center xl:text-left order-2 tablet:order-1">
-            <h4 className="text-white mb-4 xl:mb-8 opacity-50 text-nav tablet:text-head-4 
-            uppercase">
+            <h4
+              className="text-white mb-4 xl:mb-8 opacity-50 text-nav tablet:text-head-4 
+            uppercase"
+            >
               {job}
             </h4>
-            <h3 className="text-head-5 tablet:text-head-3 select-all uppercase">{name}</h3>
+            <h3 className="text-head-5 tablet:text-head-3 select-all uppercase">
+              {name}
+            </h3>
             <p className="text-body-text font-text mt-4 text-bluish-gray xl:max-w-lg">
               {description}
             </p>
@@ -81,10 +87,11 @@ function Crew() {
             />
           </div>
         </div>
-        <img 
-          src={image} alt={job + " " + name}
-          className="xl:w-2/5  w-3/4 sm:w-3/5 order-1 tablet:order-2 border-b border-white border-opacity-50 tablet:border-none"  
-          />
+        <img
+          src={image}
+          alt={job + " " + name}
+          className="xl:w-2/5  w-3/4 sm:w-3/5 order-1 tablet:order-2 border-b border-white border-opacity-50 tablet:border-none"
+        />
       </article>
     </main>
   );

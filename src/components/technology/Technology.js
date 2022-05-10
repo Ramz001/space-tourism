@@ -43,7 +43,7 @@ function Technology() {
 
   return (
     <main
-      className="pt-[8rem] tablet:pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
+      className="pt-[8rem] desktop:pb-0 pb-16 tablet:pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
       style={imgStyle}
     >
       <h2 className="page-intro-header mb-8 tablet:mb-12 tablet:ml-10 xl:ml-0 xl:mb-0">
@@ -73,16 +73,22 @@ function Technology() {
             </button>
           </div>
           <article className="font-main xl:ml-16 text-center xl:text-left mb-20 xl:mb-0">
-            <p className="text-nav text-bluish-gray uppercase mb-2">
+            <p className="text-nav text-bluish-gray uppercase mb-4">
               The Terminology...
             </p>
-            <h3 className="uppercase text-head-4 mb-4 tablet:mb-0 tablet:text-head-3">{title}</h3>
+            <h3 className="uppercase text-head-4 mb-4 tablet:text-head-3">
+              {title}
+            </h3>
             <p className="max-w-md font-text px-4 tablet:px-0 text-body-text text-bluish-gray">
               {description}
             </p>
           </article>
         </div>
-        <img src={image(imageType)} alt={title} className="w-full xl:w-2/5 order-1 xl:order-2" />
+        <img
+          src={image(imageType)}
+          alt={title}
+          className="w-full xl:w-2/5 order-1 xl:order-2"
+        />
       </article>
     </main>
   );

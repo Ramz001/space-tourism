@@ -9,10 +9,10 @@ const findWidthSlice = createSlice({
   initialState,
   reducers: {
     findWidth: (state, action) => {
-      if (action.payload.width <= 640) {
+      if (action.payload.width <= 768) {
         state.display = "mobile";
       }
-      if (action.payload.width > 640 && action.payload.width <= 1280) {
+      if (action.payload.width > 768 && action.payload.width <= 1280) {
         state.display = "tablet";
       }
       if (action.payload.width > 1280) {

@@ -15,13 +15,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex uppercase ${ isOpen ? "items-start" : "items-center"} justify-between z-10 
+      className={`flex uppercase ${
+        isOpen ? "items-start" : "items-center"
+      } justify-between z-10 
         top-0 left-0 right-0 xl:mt-8 fixed tablet:mx-0`}
     >
       <img src={logo} alt="logo" className="ml-10 mt-8 tablet:ml-14" />
-      { display !== 'mobile' &&
+      {(display === "tablet" || display === "desktop") && (
         <div className="navbar-links font-main">
-          <NavLink to="/space-tourism/" className={({ isActive }) => handleIsActive(isActive)}>
+          <NavLink
+            to="/space-tourism/"
+            className={({ isActive }) => handleIsActive(isActive)}
+          >
             <span className="font-extrabold hidden xl:inline-block">00 </span>
             Home
           </NavLink>
@@ -46,12 +51,9 @@ const Navbar = () => {
             <span className="font-extrabold hidden xl:inline-block">03 </span>
             Technology
           </NavLink>
-      </div>
-      }
-      {
-        display === 'mobile' &&
-        <MobileNavbar />
-      }
+        </div>
+      )}
+      {display === "mobile" && <MobileNavbar />}
     </nav>
   );
 };

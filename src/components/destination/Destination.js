@@ -30,7 +30,7 @@ function Destination() {
     backgroundSize: "cover",
     position: "absolute",
     right: "0",
-    left: "0", 
+    left: "0",
   };
 
   const { title, description, image, estimatedTravelTime, averageDistance } =
@@ -87,7 +87,9 @@ function Destination() {
               Titan
             </div>
           </div>
-          <h3 className="text-head-3 tablet:text-head-2 uppercase font-main">{title}</h3>
+          <h3 className="text-head-3 tablet:text-head-2 uppercase font-main">
+            {title}
+          </h3>
           <p
             className="max-w-lg pb-8 text-body-text font-text text-bluish-gray border-b 
                     border-opacity-50 border-bluish-gray mb-4 text-center xl:text-left"

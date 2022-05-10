@@ -1,20 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const intialState = {
-    isOpen: false,
-}    
-
+  isOpen: false,
+};
 
 const hamburgerSlice = createSlice({
-    name: 'hamburger',
-    initialState: intialState,
-    reducers: {
-        toggleHamburger: (state) => {
-            state.isOpen = !state.isOpen;
-        }
-    }
+  name: "hamburger",
+  initialState: intialState,
+  reducers: {
+    toggleHamburger: (state) => {
+      state.isOpen = !state.isOpen;
+    },
+  },
 });
-
 
 export const { toggleHamburger } = hamburgerSlice.actions;
 

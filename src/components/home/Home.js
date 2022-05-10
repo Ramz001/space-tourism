@@ -24,14 +24,14 @@ function Home() {
   // styles
   const imgStyle = {
     backgroundImage: `url(${fittingImg()})`,
-    backgroundSize: "100% 100%",
+    backgroundSize: "cover",
     position: "absolute",
     right: "0",
     left: "0",
   };
   return (
     <main
-      className="bg-no-repeat h-full desktop:pt-[15rem] pt-[12rem] tablet:pt-[14rem] 
+      className="bg-no-repeat pb-16 desktop:pt-[15rem] pt-[12rem] tablet:pt-[14rem] 
       tablet:pb-[8rem] px-4 tablet:px-32 flex flex-col xl:flex-row items-center 
       xl:justify-between font-main gap-24 xl:gap-0"
       style={imgStyle}
