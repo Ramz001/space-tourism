@@ -24,28 +24,28 @@ const Navbar = () => {
       {(display === "tablet" || display === "desktop") && (
         <div className="navbar-links font-main">
           <NavLink
-            to="/space-tourism/"
+            to="/"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">00 </span>
             Home
           </NavLink>
           <NavLink
-            to="/space-tourism/destinations"
+            to="/destinations"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">01 </span>
             Destinations
           </NavLink>
           <NavLink
-            to="/space-tourism/crew"
+            to="/crew"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">02 </span>
             Crew
           </NavLink>
           <NavLink
-            to="/space-tourism/technology"
+            to="/technology"
             className={({ isActive }) => handleIsActive(isActive)}
           >
             <span className="font-extrabold hidden xl:inline-block">03 </span>

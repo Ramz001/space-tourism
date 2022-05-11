@@ -36,28 +36,28 @@ export default function MobileNavbar() {
             onClick={() => dispatch(toggleHamburger())}
           />
           <NavLink 
-            to="/space-tourism/"
+            to="/X"
             className={({ isActive }) => handleIsActive(isActive)}
             >
             <span className="font-bold">00 </span>
             Home
           </NavLink>
           <NavLink 
-            to="/space-tourism/destinations"
+            to="/destinations"
             className={({ isActive }) => handleIsActive(isActive)}
             >
             <span className="font-bold">01 </span>
             Destinations
           </NavLink>
           <NavLink 
-            to="/space-tourism/crew"
+            to="/crew"
             className={({ isActive }) => handleIsActive(isActive)}
             >
             <span className="font-bold">02 </span>
             Crew
           </NavLink>
           <NavLink 
-            to="/space-tourism/technology"
+            to="/technology"
             className={({ isActive }) => handleIsActive(isActive)}
             >
             <span className="font-bold">03 </span>

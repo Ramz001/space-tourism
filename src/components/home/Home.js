@@ -48,7 +48,7 @@ function Home() {
           experience!
         </p>
       </div>
-      <Link to="/space-tourism/destinations" className="home-main-button">
+      <Link to="/destinations" className="home-main-button">
         <div className="w-56 h-56 tablet:w-[274px] tablet:h-[274px] flex items-center justify-center">
           <span className="uppercase text-very-dark-blue text-subhead-1 tracking-subhead-2">
             Explore

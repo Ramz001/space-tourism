@@ -21,7 +21,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/space-tourism/" element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="destinations" element={<Destination />} />
         <Route path="crew" element={<Crew />} />
