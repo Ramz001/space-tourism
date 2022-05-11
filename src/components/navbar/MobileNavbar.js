@@ -35,32 +35,32 @@ export default function MobileNavbar() {
             className="w-5 h-5 flex self-end cursor-pointer mt-8"
             onClick={() => dispatch(toggleHamburger())}
           />
-          <NavLink 
+          <NavLink
             to="/"
             className={({ isActive }) => handleIsActive(isActive)}
-            >
-            <span className="font-bold">00 </span>
+          >
+            <span className="font-bold mr-1">00 </span>
             Home
           </NavLink>
-          <NavLink 
+          <NavLink
             to="/destinations"
             className={({ isActive }) => handleIsActive(isActive)}
-            >
-            <span className="font-bold">01 </span>
+          >
+            <span className="font-bold mr-1">01 </span>
             Destinations
           </NavLink>
-          <NavLink 
+          <NavLink
             to="/crew"
             className={({ isActive }) => handleIsActive(isActive)}
-            >
-            <span className="font-bold">02 </span>
+          >
+            <span className="font-bold mr-1">02 </span>
             Crew
           </NavLink>
-          <NavLink 
+          <NavLink
             to="/technology"
             className={({ isActive }) => handleIsActive(isActive)}
-            >
-            <span className="font-bold">03 </span>
+          >
+            <span className="font-bold mr-1">03 </span>
             Technology
           </NavLink>
         </div>

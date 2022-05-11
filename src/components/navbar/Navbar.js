@@ -27,28 +27,36 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) => handleIsActive(isActive)}
           >
-            <span className="font-extrabold hidden xl:inline-block">00 </span>
+            <span className="font-extrabold xl:mr-1 hidden xl:inline-block">
+              00{" "}
+            </span>
             Home
           </NavLink>
           <NavLink
             to="/destinations"
             className={({ isActive }) => handleIsActive(isActive)}
           >
-            <span className="font-extrabold hidden xl:inline-block">01 </span>
+            <span className="font-extrabold xl:mr-1 hidden xl:inline-block">
+              01{" "}
+            </span>
             Destinations
           </NavLink>
           <NavLink
             to="/crew"
             className={({ isActive }) => handleIsActive(isActive)}
           >
-            <span className="font-extrabold hidden xl:inline-block">02 </span>
+            <span className="font-extrabold xl:mr-1 hidden xl:inline-block">
+              02{" "}
+            </span>
             Crew
           </NavLink>
           <NavLink
             to="/technology"
             className={({ isActive }) => handleIsActive(isActive)}
           >
-            <span className="font-extrabold hidden xl:inline-block">03 </span>
+            <span className="font-extrabold xl:mr-1 hidden xl:inline-block">
+              03{" "}
+            </span>
             Technology
           </NavLink>
         </div>
