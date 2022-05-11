@@ -36,7 +36,7 @@ export default function MobileNavbar() {
             onClick={() => dispatch(toggleHamburger())}
           />
           <NavLink 
-            to="/X"
+            to="/"
             className={({ isActive }) => handleIsActive(isActive)}
             >
             <span className="font-bold">00 </span>
