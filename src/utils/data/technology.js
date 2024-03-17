@@ -6,7 +6,7 @@ import imageSpaceCapsulePortrait from "../../assets/technology/image-space-capsu
 import imageSpaceportLandcape from "../../assets/technology/image-spaceport-landscape.jpg";
 import imageSpaceportPortrait from "../../assets/technology/image-spaceport-portrait.jpg";
 
-export default [
+export const technologyData = [
   {
     id: nanoid(),
     title: "launch vehicle",

@@ -4,7 +4,7 @@ import imageDouglasHurley from "../../assets/crew/image-douglas-hurley.webp";
 import imageMarkShuttleworth from "../../assets/crew/image-mark-shuttleworth.webp";
 import imageVictorGlover from "../../assets/crew/image-victor-glover.webp";
 
-export default [
+export const crewData = [
   {
     id: nanoid(),
     name: "Douglas Hurley",

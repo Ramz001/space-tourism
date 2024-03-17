@@ -1,19 +1,18 @@
-import data from "./technologyData";
 import backgroundTechnologyDesktop from "../../assets/technology/background-technology-desktop.jpg";
 import backgroundTechnologyTablet from "../../assets/technology/background-technology-tablet.jpg";
 import backgroundTechnologyMobile from "../../assets/technology/background-technology-mobile.jpg";
 import { useSelector } from "react-redux";
 import "../../index.css";
-import { setCurrentTechnology } from "../../features/currentTechnologySlice";
 import { useDispatch } from "react-redux";
 
 function Technology() {
-  const { display } = useSelector((state) => state.findWidth);
-  const { currentTechnology } = useSelector((state) => state.currentTechnology);
-  const dispatch = useDispatch();
-  const imageType = display === "desktop" ? "portrait" : "landscape";
+  const display = "desktop"
 
-  const { title, description, image } = data[currentTechnology];
+  const { currentTechnology } = useSelector((state) => state.currentTechnology);
+  // const dispatch = useDispatch();
+  // const imageType = display === "desktop" ? "portrait" : "landscape";
+
+  // const { title, description, image } = data[currentTechnology];
 
   const fittingImg = () => {
     switch (display) {
@@ -43,10 +42,10 @@ function Technology() {
 
   return (
     <main
-      className="pt-[8rem] desktop:pb-0 pb-16 tablet:pt-[10rem] desktop:pt-[12rem] lg:pb-[2rem] xl:pl-32"
+      className="pt-[8rem] d:pb-0 pb-16 t:pt-[10rem] d:pt-[12rem] lg:pb-[2rem] xl:pl-32"
       style={imgStyle}
     >
-      <h2 className="page-intro-header mb-8 tablet:mb-12 tablet:ml-10 xl:ml-0 xl:mb-0">
+      {/* <h2 className="page-intro-header mb-8 t:mb-12 t:ml-10 xl:ml-0 xl:mb-0">
         <span className="page-intro-header-number">03 </span>
         Space Launch 101
       </h2>
@@ -76,10 +75,10 @@ function Technology() {
             <p className="text-nav text-bluish-gray uppercase mb-4">
               The Terminology...
             </p>
-            <h3 className="uppercase text-head-4 mb-4 tablet:text-head-3">
+            <h3 className="uppercase text-head-4 mb-4 t:text-head-3">
               {title}
             </h3>
-            <p className="max-w-md font-text px-4 tablet:px-0 text-body-text text-bluish-gray">
+            <p className="max-w-md font-text px-4 t:px-0 text-body-text text-bluish-gray">
               {description}
             </p>
           </article>
@@ -89,7 +88,7 @@ function Technology() {
           alt={title}
           className="w-full xl:w-2/5 order-1 xl:order-2"
         />
-      </article>
+      </article> */}
     </main>
   );
 }

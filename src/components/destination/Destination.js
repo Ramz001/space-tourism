@@ -3,14 +3,13 @@ import backgroundDestionationTablet from "../../assets/destination/background-de
 import backgroundDestionMobile from "../../assets/destination/background-destination-mobile.jpg";
 import { useSelector } from "react-redux";
 import "../../index.css";
-import data from "./destionationData";
-import { setCurrentPlanet } from "../../features/currentPlanetSlice";
 import { useDispatch } from "react-redux";
 
 function Destination() {
-  const { display } = useSelector((state) => state.findWidth);
-  const { currentPlanet } = useSelector((state) => state.currentPlanet);
-  const dispatch = useDispatch();
+  const display = "desktop"
+  ;
+  // const { currentPlanet } = useSelector((state) => state.currentPlanet);
+  // const dispatch = useDispatch();
 
   const fittingImg = () => {
     switch (display) {
@@ -33,27 +32,27 @@ function Destination() {
     left: "0",
   };
 
-  const { title, description, image, estimatedTravelTime, averageDistance } =
-    data[currentPlanet];
+  // const { title, description, image, estimatedTravelTime, averageDistance } =
+  //   data[currentPlanet];
 
-  const planetBtnStyle = (n) =>
-    currentPlanet === n
-      ? "text-white border-b-2 border-white destination-btn"
-      : "hover:border-b-2 hover:border-opacity-25 hover:border-white destination-btn";
+  // const planetBtnStyle = (n) =>
+  //   currentPlanet === n
+  //     ? "text-white border-b-2 border-white destination-btn"
+  //     : "hover:border-b-2 hover:border-opacity-25 hover:border-white destination-btn";
 
   return (
     <main
-      className="font-text pt-[10rem] pb-[6rem] desktop:pt-[12.5rem] lg:pb-[8rem] 
-      desktop:pb-[10rem] 2xl:pb-[11rem] px-8 xl:px-32 "
+      className="font-text pt-[10rem] pb-[6rem] d:pt-[12.5rem] lg:pb-[8rem] 
+      d:pb-[10rem] 2xl:pb-[11rem] px-8 xl:px-32 "
       style={imgStyle}
     >
-      <h2 className="page-intro-header mb-8 tablet:mb-16">
+      {/* <h2 className="page-intro-header mb-8 t:mb-16">
         <span className="page-intro-header-number">01 </span>
         Pick Your Destination
       </h2>
       <div className="flex xl:flex-row flex-col justify-center gap-16 xl:gap-40 items-center px-20 xl:px-0">
         <img
-          className="animate-spin-slow w-full h-full tablet:w-3/5 tablet:h-3/5 xl:w-2/5 xl:h-2/5"
+          className="animate-spin-slow w-full h-full t:w-3/5 t:h-3/5 xl:w-2/5 xl:h-2/5"
           src={image}
           alt={title}
         ></img>
@@ -87,7 +86,7 @@ function Destination() {
               Titan
             </div>
           </div>
-          <h3 className="text-head-3 tablet:text-head-2 uppercase font-main">
+          <h3 className="text-head-3 t:text-head-2 uppercase font-main">
             {title}
           </h3>
           <p
@@ -96,7 +95,7 @@ function Destination() {
           >
             {description}
           </p>
-          <div className="flex tablet:flex-row flex-col gap-y-12 tablet:gap-y-0 gap-x-24">
+          <div className="flex t:flex-row flex-col gap-y-12 t:gap-y-0 gap-x-24">
             <div className="flex flex-col gap-2 items-center">
               <span className="uppercase text-subhead-2 text-bluish-gray font-main">
                 avg. distance
@@ -111,7 +110,7 @@ function Destination() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

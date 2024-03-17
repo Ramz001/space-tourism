@@ -4,7 +4,7 @@ import imageTitan from "../../assets/destination/image-titan.webp";
 import imageMars from "../../assets/destination/image-mars.webp";
 import { nanoid } from "nanoid";
 
-export default [
+export const destinationData = [
   {
     id: nanoid(),
     title: "Moon",

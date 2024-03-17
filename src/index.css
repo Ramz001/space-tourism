@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,36 @@
 
 @layer components {
   .navbar-links {
-    @apply flex relative h-24 bg-opacity-20 bg-[#979797] text-white gap-6 xl:gap-12 justify-center 
-    w-[450px] lg:w-[650px] xl:w-[830px]
-    items-center text-subhead-2 xl:text-nav z-10 rounded-tl-sm rounded-bl-sm xl:tracking-nav 
-    xl:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
-    xl:before:bg-bluish-gray xl:before:absolute xl:before:z-20 
-    xl:before:opacity-50
-    after:blur-md after:opacity-80 after:bg-[#333] xl:after:bg-[#979797] after:-z-10 after:absolute after:top-0 after:right-0 
-    after:left-0 after:bottom-0 after:h-24 after:w-[830px] xl:after:opacity-20;
+    @apply flex relative h-24 bg-opacity-5 bg-white text-white gap-6 d:gap-12 justify-center 
+    t:w-[450px] d:w-[830px] backdrop-blur-[82px] items-center t:text-subhead-2 
+    d:text-base z-10 rounded-tl-sm rounded-bl-sm d:tracking-nav 
+    d:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
+    d:before:bg-bluish-gray xl:before:absolute xl:before:z-20 xl:before:opacity-50;
   }
   .nav-link {
     @apply relative before:rounded-md before:left-0 before:right-0 before:-bottom-[2.3rem] 
         before:absolute before:w-auto before:transition before:ease-out before:duration-300;
   }
-  .nav-link-mobile {
-    @apply relative before:rounded-md before:-right-[2.3rem] before:top-0 before:bottom-0 before:absolute 
-      before:h-auto before:transition before:ease-out before:duration-300 before:w-1 before:z-50;
-  }
   .home-main-button {
     @apply bg-white relative rounded-full hover:bg-clip-content cursor-pointer 
-        before:opacity-10 before:hover:bg-white before:-top-[2.5rem] tablet:before:-top-[3.5rem] 
-        before:bottom-0 before:right-0  before:-left-[2.5rem] tablet:before:-left-[3.5rem] 
-        before:rounded-full before:absolute before:w-[20rem] before:h-[20rem] tablet:before:w-[24rem] 
-        tablet:before:h-[24rem] before:transition before:ease-out before:duration-500;
+        before:opacity-10 before:hover:bg-white before:-top-[2.5rem] t:before:-top-[3.5rem] 
+        before:bottom-0 before:right-0  before:-left-[2.5rem] t:before:-left-[3.5rem] 
+        before:rounded-full before:absolute before:w-[20rem] before:h-[20rem] t:before:w-[24rem] 
+        t:before:h-[24rem] before:transition before:ease-out before:duration-500;
   }
   .destination-btn {
     @apply pb-2 cursor-pointer select-none;
   }
   .page-intro-header {
-    @apply text-white tracking-head-5 text-center tablet:text-left text-nav tablet:text-subhead-1 font-text uppercase;
+    @apply text-white tracking-head-5 text-center t:text-left text-base t:text-subhead-1 
+    font-text uppercase;
   }
   .page-intro-header-number {
     @apply opacity-25 font-bold tracking-head-5;
   }
   .technology-btn {
-    @apply rounded-full w-12 h-12 tablet:w-16 tablet:h-16 text-subhead-1 font-main border-2 border-white border-opacity-40 hover:border-opacity-100 transition ease-out duration-300;
+    @apply rounded-full w-12 h-12 t:w-16 t:h-16 text-subhead-1 font-main border-2 
+    border-white border-opacity-40 hover:border-opacity-100 transition ease-out duration-300;
   }
   img,
   div {
