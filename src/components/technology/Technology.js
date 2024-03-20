@@ -1,50 +1,35 @@
-import backgroundTechnologyDesktop from "../../assets/technology/background-technology-desktop.jpg";
-import backgroundTechnologyTablet from "../../assets/technology/background-technology-tablet.jpg";
-import backgroundTechnologyMobile from "../../assets/technology/background-technology-mobile.jpg";
-import { useSelector } from "react-redux";
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+import TechnologyDesktop from "../../assets/technology/background-technology-desktop.jpg";
+import TechnologyTablet from "../../assets/technology/background-technology-tablet.jpg";
+import TechnologyMobile from "../../assets/technology/background-technology-mobile.jpg";
+import { useSelector, useDispatch } from "react-redux";
 import "../../index.css";
-import { useDispatch } from "react-redux";
 
 function Technology() {
-  const display = "desktop"
 
-  const { currentTechnology } = useSelector((state) => state.currentTechnology);
+  // const { currentTechnology } = useSelector((state) => state.currentTechnology);
   // const dispatch = useDispatch();
   // const imageType = display === "desktop" ? "portrait" : "landscape";
 
   // const { title, description, image } = data[currentTechnology];
 
-  const fittingImg = () => {
-    switch (display) {
-      case "desktop":
-        return backgroundTechnologyDesktop;
-      case "tablet":
-        return backgroundTechnologyTablet;
-      case "mobile":
-        return backgroundTechnologyMobile;
-      default:
-        return backgroundTechnologyDesktop;
-    }
-  };
-
-  const imgStyle = {
-    backgroundImage: `url(${fittingImg()})`,
-    backgroundSize: "cover",
-    position: "absolute",
-    right: "0",
-    left: "0",
-  };
 
   const bntStyle = (n) =>
     currentTechnology === n
-      ? "bg-white text-very-dark-blue "
-      : "bg-very-dark-blue text-white  ";
+      ? "bg-white text-very-dark-blue"
+      : "bg-very-dark-blue text-white";
 
   return (
     <main
       className="pt-[8rem] d:pb-0 pb-16 t:pt-[10rem] d:pt-[12rem] lg:pb-[2rem] xl:pl-32"
-      style={imgStyle}
     >
+      <img
+        srcSet={`${TechnologyMobile} 375w, ${TechnologyTablet} 768w, ${TechnologyDesktop} 1400w`}
+        sizes="(max-width: 768px) 375px, (max-width: 1064px) 768px, 1400px"
+        alt="stars rotating background"
+        className="absolute w-full h-full left-0 top-0 z-0 object-cover select-none"
+      />
       {/* <h2 className="page-intro-header mb-8 t:mb-12 t:ml-10 xl:ml-0 xl:mb-0">
         <span className="page-intro-header-number">03 </span>
         Space Launch 101

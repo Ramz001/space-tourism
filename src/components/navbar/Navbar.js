@@ -23,7 +23,7 @@ const Navbar = () => {
       <img
         src={logo}
         alt="logo"
-        className="ml-10 mt-8 d:mt-0 t:ml-14 self-start"
+        className="ml-10 mt-8 d:mt-0 t:ml-14 self-start t:self-center"
       />
       <div className="navbar-links hidden t:flex">
         <NavLink to="/" className={({ isActive }) => handleIsActive(isActive)}>
@@ -55,13 +55,13 @@ const Navbar = () => {
 
       {isOpen ? (
         <div
-          className="flex t:hidden flex-col gap-20 bg-white bg-opacity-5 text-white 
-          z-40 px-12 relative h-screen w-3/5 pt-5 text-nav backdrop-blur-[82px]"
+          className="flex t:hidden flex-col gap-16 bg-white bg-opacity-5 text-white 
+          z-40 px-12 relative h-screen w-3/4 pt-5 backdrop-blur-[82px]"
         >
           <img
             src={close}
             alt="close button"
-            className="w-5 h-5 flex self-end cursor-pointer mt-8"
+            className="w-5 h-5 flex self-end cursor-pointer mt-7"
             onClick={() => dispatch(toggleHamburger())}
           />
           <NavLink to="/">
@@ -85,7 +85,7 @@ const Navbar = () => {
         <img
           src={hamburger}
           alt="logo"
-          className="block t:hidden mr-10 mt-8 cursor-pointer"
+          className="t:hidden mr-10 mt-8 cursor-pointer block"
           onClick={() => dispatch(toggleHamburger())}
         />
       )}

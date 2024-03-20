@@ -4,9 +4,9 @@ import { crewData } from "../utils/data/crew";
 import { destinationData } from "../utils/data/destionation";
 
 const initialState = {
-  destinationData: JSON.stringify(destinationData),
-  technologyData: JSON.stringify(technologyData),
-  crewData: JSON.stringify(crewData),
+  destinationData: destinationData,
+  technologyData: technologyData,
+  crewData: crewData,
 };
 
 const tabSlice = createSlice({
@@ -21,7 +21,7 @@ const tabSlice = createSlice({
     },
     setCurrentTechnology: (state, action) => {
       state.currentTechnology = action.payload;
-    }
+    },
   },
 });
 

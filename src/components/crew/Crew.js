@@ -1,34 +1,13 @@
-import backgroundCrewDesktop from "../../assets/crew/background-crew-desktop.jpg";
-import backgroundCrewTablet from "../../assets/crew/background-crew-tablet.jpg";
-import backgroundCrewMobile from "../../assets/crew/background-crew-mobile.jpg";
+/* eslint-disable no-unused-vars */
+import CrewDesktop from "../../assets/crew/background-crew-desktop.jpg";
+import CrewTablet from "../../assets/crew/background-crew-tablet.jpg";
+import CrewMobile from "../../assets/crew/background-crew-mobile.jpg";
 import { useSelector, useDispatch } from "react-redux";
 import "../../index.css";
 
 function Crew() {
-  const display = "desktop"
   ;
   // const { name, description, image, job } = crewData[currentPerson];
-
-  const fittingImg = () => {
-    switch (display) {
-      case "desktop":
-        return backgroundCrewDesktop;
-      case "tablet":
-        return backgroundCrewTablet;
-      case "mobile":
-        return backgroundCrewMobile;
-      default:
-        return backgroundCrewDesktop;
-    }
-  };
-
-  const imgStyle = {
-    backgroundImage: `url(${fittingImg()})`,
-    backgroundSize: "cover",
-    position: "absolute",
-    right: "0",
-    left: "0",
-  };
 
   // const dispatch = useDispatch();
 
@@ -40,8 +19,13 @@ function Crew() {
   return (
     <main
       className="pt-[8rem] pb-20 xl:pb-0 sm:pt-[10rem] d:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
-      style={imgStyle}
     >
+      <img
+        srcSet={`${CrewMobile} 375w, ${CrewTablet} 768w, ${CrewDesktop} 1400w`}
+        sizes="(max-width: 768px) 375px, (max-width: 1064px) 768px, 1400px"
+        alt="stars rotating background"
+        className="absolute w-full h-full left-0 top-0 z-0 object-cover select-none"
+      />
       {/* <h2 className="page-intro-header mb-8 ">
         <span className="page-intro-header-number">02 </span>
         Meet your crew
