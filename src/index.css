@@ -36,12 +36,11 @@
     before:opacity-15 before:transition before:duration-500 before:ease-out 
     hover:bg-clip-content before:hover:bg-white t:before:-left-[1.5rem] 
     t:before:-top-[1.5rem] t:before:h-[18rem] t:before:w-[18rem] d:before:h-[25rem] 
-    d:before:w-[25rem];
+    d:before:w-[25rem] d:before:-top-[3.25rem] d:before:-left-[3.5rem];
   }
   .technology-btn {
     @apply flex h-10 w-10 items-center justify-center rounded-full border border-white 
-    border-opacity-50 text-base transition-all ease-in-out hover:bg-white hover:bg-opacity-75 hover:text-very-dark-blue 
-    t:h-16 t:w-16 t:text-2xl d:h-20 
-    d:w-20 d:text-[32px];
+    border-opacity-50 text-base transition-all ease-in-out hover:bg-white hover:bg-opacity-75 
+    hover:text-very-dark-blue t:h-16 t:w-16 t:text-2xl d:h-20 d:w-20 d:text-[32px];
   }
 }
