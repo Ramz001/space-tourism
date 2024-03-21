@@ -24,7 +24,7 @@
     t:w-[450px] d:w-[830px] backdrop-blur-[82px] items-center 
     d:text-base text-sm z-10 rounded-tl-md rounded-bl-md d:tracking-sm justify-center
     d:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
-    d:before:bg-bluish-gray xl:before:absolute xl:before:z-20 xl:before:opacity-50;
+  d:before:bg-bluish-gray d:before:absolute d:before:z-20 xl:before:opacity-50;
   }
   .nav-link {
     @apply relative before:rounded-md before:left-0 before:right-0 before:-bottom-[2.15rem] 

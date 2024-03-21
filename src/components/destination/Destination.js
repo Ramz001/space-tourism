@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
 import DestinationDesktop from "../../assets/destination/background-destination-desktop.jpg";
 import DestinationTablet from "../../assets/destination/background-destination-tablet.jpg";
 import DestinationMobile from "../../assets/destination/background-destination-mobile.jpg";
 import { useSelector } from "react-redux";
 import "../../index.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Destination() {
   const { destinationData } = useSelector((store) => store.tabs);
@@ -19,7 +18,7 @@ function Destination() {
 
   return (
     <main
-      className="font-text px-8 d:px-44 bg-slate-900 min-h-svh d:min-h-screen
+      className="font-text px-8 d:px-32 bg-slate-900 min-h-svh d:min-h-screen
      text-white relative pt-40 d:pt-[14.5%] flex flex-col"
     >
       <img

@@ -4,21 +4,23 @@ import CrewTablet from "../../assets/crew/background-crew-tablet.jpg";
 import CrewMobile from "../../assets/crew/background-crew-mobile.jpg";
 import { useSelector, useDispatch } from "react-redux";
 import "../../index.css";
+import { useState } from "react";
 
 function Crew() {
-  ;
-  // const { name, description, image, job } = crewData[currentPerson];
+  const { crewData } = useSelector((store) => store.tabs);
+  const [currentCrew, setCurrentCrew] = useState(0);
 
-  // const dispatch = useDispatch();
+  const { name, description, image, job } = crewData[currentCrew];
 
-  // const personBtnStyle = (n) =>
-  //   currentPerson === n
-  //     ? "bg-white"
-  //     : "hover:bg-white hover:opacity-75 bg-white opacity-50";
+  const crewBtnStyle = (n) =>
+    currentCrew === n
+      ? "bg-white"
+      : "hover:bg-white hover:opacity-75 bg-white opacity-50";
 
   return (
     <main
-      className="pt-[8rem] pb-20 xl:pb-0 sm:pt-[10rem] d:pt-[12.5rem] px-8 sm:px-10 xl:px-32 h-auto"
+      className="font-text px-4 t:px-8 d:px-32 bg-slate-900 min-h-svh d:min-h-screen
+      text-white relative pt-28 t:pt-40 d:pt-[14%] flex flex-col"
     >
       <img
         srcSet={`${CrewMobile} 375w, ${CrewTablet} 768w, ${CrewDesktop} 1400w`}
@@ -26,54 +28,71 @@ function Crew() {
         alt="stars rotating background"
         className="absolute w-full h-full left-0 top-0 z-0 object-cover select-none"
       />
-      {/* <h2 className="page-intro-header mb-8 ">
-        <span className="page-intro-header-number">02 </span>
+      <h2
+        className="text-white tracking-lg text-center t:text-left text-base 
+          t:text-xl d:text-[28px] uppercase mb-8 d:mb-32 z-0 d:hidden"
+      >
+        <span className="opacity-25 mb-8 font-bold tracking-lg mr-4">02</span>
         Meet your crew
       </h2>
-      <article
-        className="flex flex-col xl:flex-row items-center justify-center
-        text-white"
+      <section
+        className="z-0 flex d:flex-row flex-col-reverse t:flex-col gap-y-8 t:gap-y-10 d:gap-8  
+      justify-center d:justify-between items-center"
       >
-        <div className="flex flex-col justify-evenly items-center xl:items-start xl:w-[57.5%] order-2 t:order-1">
-          <div className="mb-8 font-main text-center xl:text-left order-2 t:order-1">
-            <h4
-              className="text-white mb-4 xl:mb-8 opacity-50 text-nav t:text-head-4 
-            uppercase"
-            >
-              {job}
-            </h4>
-            <h3 className="text-head-5 t:text-head-3 select-all uppercase">
-              {name}
-            </h3>
-            <p className="text-body-text font-text mt-4 text-bluish-gray xl:max-w-lg">
-              {description}
-            </p>
-          </div>
-          <div className="t:mb-20 my-8 t:my-0 flex gap-8 order-1 t:order-2">
-            <button
-              className={`w-3 h-3 rounded-full ${personBtnStyle(0)}`}
-              onClick={() => dispatch(setCurrentPerson(0))}
+        <div className="flex flex-col gap-4 t:gap-6 d:gap-8 d:self-start self-center d:text-start text-center">
+          <h2
+            className="text-white tracking-lg text-center t:text-left text-base 
+          t:text-xl d:text-[28px] uppercase mb-8 d:mb-32 z-0 hidden d:block"
+          >
+            <span className="opacity-25 mb-8 font-bold tracking-lg mr-4 ">
+              02
+            </span>
+            Meet your crew
+          </h2>
+          <h3 className="d:text-[32px] t:text-2xl text-base uppercase tracking-sm text-white opacity-50">
+            {job}
+          </h3>
+          <h2 className="d:text-[56px] t:text-[40px] text-2xl font-main uppercase">
+            {name}
+          </h2>
+          <p className="d:text-xl t:text-base text-[15px] max-w-lg tracking-wider mb-8 d:mb-16">
+            {description}
+          </p>
+          <div className="flex gap-6 justify-center d:justify-start items-center mb-8 t:mb-0">
+            <span
+              onClick={() => setCurrentCrew(0)}
+              className={`cursor-pointer w-4 h-4 rounded-full ${crewBtnStyle(
+                0
+              )}`}
             />
-            <button
-              className={`w-3 h-3 rounded-full ${personBtnStyle(1)}`}
-              onClick={() => dispatch(setCurrentPerson(1))}
+            <span
+              onClick={() => setCurrentCrew(1)}
+              className={`cursor-pointer w-4 h-4 rounded-full ${crewBtnStyle(
+                1
+              )}`}
             />
-            <button
-              className={`w-3 h-3 rounded-full ${personBtnStyle(2)}`}
-              onClick={() => dispatch(setCurrentPerson(2))}
+            <span
+              onClick={() => setCurrentCrew(2)}
+              className={`cursor-pointer w-4 h-4 rounded-full ${crewBtnStyle(
+                2
+              )}`}
             />
-            <button
-              className={`w-3 h-3 rounded-full ${personBtnStyle(3)}`}
-              onClick={() => dispatch(setCurrentPerson(3))}
+            <span
+              onClick={() => setCurrentCrew(3)}
+              className={`cursor-pointer w-4 h-4 rounded-full ${crewBtnStyle(
+                3
+              )}`}
             />
           </div>
         </div>
-        <img
-          src={image}
-          alt={job + " " + name}
-          className="xl:w-2/5  w-3/4 sm:w-3/5 order-1 t:order-2 border-b border-white border-opacity-50 t:border-none"
-        />
-      </article> */}
+        <div className="w-full d:w-auto flex justify-center items-center border-b border-white border-opacity-50 pb-1 t:pb-0">
+          <img
+            src={image}
+            alt={name}
+            className=" max-h-[223px] t:max-h-[572px] d:max-h-[712px]"
+          />
+        </div>
+      </section>
     </main>
   );
 }
