@@ -1,81 +1,92 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-import TechnologyDesktop from "../../assets/technology/background-technology-desktop.jpg";
-import TechnologyTablet from "../../assets/technology/background-technology-tablet.jpg";
-import TechnologyMobile from "../../assets/technology/background-technology-mobile.jpg";
-import { useSelector, useDispatch } from "react-redux";
-import "../../index.css";
+import TechnologyDesktop from '../../assets/technology/background-technology-desktop.jpg'
+import TechnologyTablet from '../../assets/technology/background-technology-tablet.jpg'
+import TechnologyMobile from '../../assets/technology/background-technology-mobile.jpg'
+import { useSelector, useDispatch } from 'react-redux'
+import '../../index.css'
+import { useState } from 'react'
 
 function Technology() {
-
-  // const { currentTechnology } = useSelector((state) => state.currentTechnology);
-  // const dispatch = useDispatch();
-  // const imageType = display === "desktop" ? "portrait" : "landscape";
-
-  // const { title, description, image } = data[currentTechnology];
-
+  const { technologyData } = useSelector((store) => store.tabs)
+  const [currentTechnology, setCurrentTechnology] = useState(0)
+  const { title, description, image } = technologyData[currentTechnology]
 
   const bntStyle = (n) =>
     currentTechnology === n
-      ? "bg-white text-very-dark-blue"
-      : "bg-very-dark-blue text-white";
+      ? 'bg-white text-very-dark-blue'
+      : 'bg-very-dark-blue text-white'
 
   return (
-    <main
-      className="pt-[8rem] d:pb-0 pb-16 t:pt-[10rem] d:pt-[12rem] lg:pb-[2rem] xl:pl-32"
-    >
+    <main className="z-0 mt-32 flex flex-col text-white t:mt-40 d:ml-32">
       <img
         srcSet={`${TechnologyMobile} 375w, ${TechnologyTablet} 768w, ${TechnologyDesktop} 1400w`}
         sizes="(max-width: 768px) 375px, (max-width: 1064px) 768px, 1400px"
         alt="stars rotating background"
-        className="absolute w-full h-full left-0 top-0 z-0 object-cover select-none"
+        className="fixed left-0 top-0 z-0 min-h-full w-full 
+        select-none object-cover"
       />
-      {/* <h2 className="page-intro-header mb-8 t:mb-12 t:ml-10 xl:ml-0 xl:mb-0">
-        <span className="page-intro-header-number">03 </span>
+      <h2
+        className=" z-0 mb-8 text-center text-base 
+        uppercase tracking-lg t:text-xl d:text-left d:text-[28px]"
+      >
+        <span className="mb-8 mr-4 font-bold tracking-lg opacity-25">03 </span>
         Space Launch 101
       </h2>
-      <article className="flex flex-col xl:flex-row text-white justify-center xl:justify-start items-center xl:h-[80vh]">
-        <div className="flex w-full items-center flex-col xl:flex-row xl:w-3/5 xl:order-1 order-2">
-          <div className="flex xl:flex-col xl:gap-10 gap-16 xl:my-0 my-12">
+      <section
+        className="z-0 flex flex-col-reverse items-center justify-between gap-6 text-center 
+      t:gap-8 d:flex-row d:gap-0 d:text-start"
+      >
+        <div className="flex flex-col gap-8 d:flex-row d:gap-16">
+          <div
+            className="flex flex-row justify-center gap-6 font-main 
+          d:flex-col d:justify-start d:gap-8"
+          >
             <button
+              onClick={() => setCurrentTechnology(0)}
               className={`technology-btn ${bntStyle(0)}`}
-              onClick={() => dispatch(setCurrentTechnology(0))}
             >
               1
             </button>
             <button
+              onClick={() => setCurrentTechnology(1)}
               className={`technology-btn ${bntStyle(1)}`}
-              onClick={() => dispatch(setCurrentTechnology(1))}
             >
               2
             </button>
             <button
+              onClick={() => setCurrentTechnology(2)}
               className={`technology-btn ${bntStyle(2)}`}
-              onClick={() => dispatch(setCurrentTechnology(2))}
             >
               3
             </button>
           </div>
-          <article className="font-main xl:ml-16 text-center xl:text-left mb-20 xl:mb-0">
-            <p className="text-nav text-bluish-gray uppercase mb-4">
+          <div className="flex flex-col gap-4 t:gap-6 d:gap-8">
+            <p className="uppercase tracking-sm text-bluish-gray">
               The Terminology...
             </p>
-            <h3 className="uppercase text-head-4 mb-4 t:text-head-3">
+            <h3 className="font-main text-2xl uppercase t:text-[40px] d:mb-4 d:text-[56px]">
               {title}
             </h3>
-            <p className="max-w-md font-text px-4 t:px-0 text-body-text text-bluish-gray">
+            <p className="max-w-xs text-[15px] leading-7 tracking-wide text-bluish-gray t:max-w-lg t:text-base d:text-lg">
               {description}
             </p>
-          </article>
+          </div>
         </div>
-        <img
-          src={image(imageType)}
-          alt={title}
-          className="w-full xl:w-2/5 order-1 xl:order-2"
-        />
-      </article> */}
+        <div className="mx-auto h-auto w-auto t:self-center d:m-0 d:self-end">
+          <img
+            src={image('portrait')}
+            alt={title}
+            className="hidden d:block d:h-[528px]"
+          />
+          <img
+            src={image('landscape')}
+            alt={title}
+            className="h-[170px] t:h-[310px] d:hidden"
+          />
+        </div>
+      </section>
     </main>
-  );
+  )
 }
 
-export default Technology;
+export default Technology

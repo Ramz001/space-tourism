@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit'
 
-import hamburgerReducer from "./features/hamburgerSlice";
+import hamburgerReducer from './features/hamburgerSlice'
 import tabsReducer from './features/tabsSlice'
 
 const store = configureStore({
@@ -8,6 +8,6 @@ const store = configureStore({
     hamburger: hamburgerReducer,
     tabs: tabsReducer,
   },
-});
+})
 
-export default store;
+export default store

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,25 +20,28 @@
 
 @layer components {
   .navbar-links {
-    @apply flex relative h-24 bg-opacity-5 bg-white text-white gap-8 d:gap-12  
-    t:w-[450px] d:w-[830px] backdrop-blur-[82px] items-center 
-    d:text-base text-sm z-10 rounded-tl-md rounded-bl-md d:tracking-sm justify-center
-    d:before:w-[50%] xl:before:h-px xl:before:-left-[45%] xl:before:bottom-[50%] 
-  d:before:bg-bluish-gray d:before:absolute d:before:z-20 xl:before:opacity-50;
+    @apply relative z-10 flex h-24 items-center justify-center gap-8 rounded-bl-md  
+    rounded-tl-md bg-white bg-opacity-5 text-sm text-white backdrop-blur-[82px] 
+    t:w-[450px] xl:before:-left-[45%] xl:before:bottom-[50%] xl:before:h-px 
+    xl:before:opacity-50 d:w-[830px] d:gap-12 d:text-base d:tracking-sm 
+    d:before:absolute d:before:z-20 d:before:w-[50%] d:before:bg-bluish-gray;
   }
   .nav-link {
-    @apply relative before:rounded-md before:left-0 before:right-0 before:-bottom-[2.15rem] 
-        before:absolute before:w-auto before:transition before:ease-out before:duration-300;
+    @apply relative before:absolute before:-bottom-[2.15rem] before:left-0 before:right-0 
+    before:w-auto before:rounded-md before:transition before:duration-300 before:ease-out;
   }
-  /* .home-link-button-hover {
-    @apply hover:bg-clip-content cursor-pointer 
-        before:opacity-15 before:hover:bg-white before:-top-[2.5rem] t:before:-top-[3.5rem] 
-        before:bottom-0 before:right-0 before:-left-[2.5rem] t:before:-left-[3.5rem] 
-        before:rounded-full before:absolute before:w-[15rem] before:h-[15rem] t:before:w-[18rem] 
-        t:before:h-[18rem] d:before:h-[25rem] d:before:w-[25rem] before:transition before:ease-out before:duration-500;
-  } */
+  .home-link-button-hover {
+    @apply cursor-pointer before:absolute before:-left-[2rem] before:-top-[2rem] 
+    before:bottom-0 before:right-0 before:h-[14rem] before:w-[14rem] before:rounded-full 
+    before:opacity-15 before:transition before:duration-500 before:ease-out 
+    hover:bg-clip-content before:hover:bg-white t:before:-left-[1.5rem] 
+    t:before:-top-[1.5rem] t:before:h-[18rem] t:before:w-[18rem] d:before:h-[25rem] 
+    d:before:w-[25rem];
+  }
   .technology-btn {
-    @apply rounded-full w-12 h-12 t:w-16 t:h-16 text-xl font-main border-2 duration-300
-    border-white border-opacity-40 hover:border-opacity-100 transition ease-out;
+    @apply flex h-10 w-10 items-center justify-center rounded-full border border-white 
+    border-opacity-50 text-base transition-all ease-in-out hover:bg-white hover:bg-opacity-75 hover:text-very-dark-blue 
+    t:h-16 t:w-16 t:text-2xl d:h-20 
+    d:w-20 d:text-[32px];
   }
 }
