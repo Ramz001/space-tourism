@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@million/lint": "^1.0.0-rc.76",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -18,11 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "craco start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.7",
     "gh-pages": "^3.2.3",
     "postcss": "^8.4.13",
