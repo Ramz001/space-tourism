@@ -8,8 +8,8 @@ module.exports = {
       },
       screens: {
         m: "375px",
-        t: "768px",
-        d: "1440px",
+        t: "640px",
+        d: "1280px",
       },
       fontFamily: {
         main: "Bellefair, sans-serif",

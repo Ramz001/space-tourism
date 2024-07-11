@@ -23,7 +23,7 @@
     @apply relative z-10 flex h-24 items-center justify-center gap-8 rounded-bl-md  
     rounded-tl-md bg-white bg-opacity-5 text-sm text-white backdrop-blur-[82px] 
     t:w-[450px] xl:before:-left-[45%] xl:before:bottom-[50%] xl:before:h-px 
-    xl:before:opacity-50 d:w-[830px] d:gap-12 d:text-base d:tracking-sm 
+    xl:before:opacity-50 d:w-[800px] d:gap-12 d:text-base d:tracking-sm 
     d:before:absolute d:before:z-20 d:before:w-[50%] d:before:bg-bluish-gray;
   }
   .nav-link {
