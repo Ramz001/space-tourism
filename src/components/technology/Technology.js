@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import TechnologyDesktop from '../../assets/technology/background-technology-desktop.jpg'
-import TechnologyTablet from '../../assets/technology/background-technology-tablet.jpg'
-import TechnologyMobile from '../../assets/technology/background-technology-mobile.jpg'
+import TechnologyDesktop from '../../assets/technology/background-technology-desktop.webp'
+import TechnologyTablet from '../../assets/technology/background-technology-tablet.webp'
+import TechnologyMobile from '../../assets/technology/background-technology-mobile.webp'
 import { useSelector, useDispatch } from 'react-redux'
 import '../../index.css'
 import { useState } from 'react'
@@ -17,7 +17,7 @@ function Technology() {
       : 'bg-very-dark-blue text-white'
 
   return (
-    <main className="z-0 mt-32 flex flex-col text-white t:mt-40 d:ml-32">
+    <main className="z-0 mt-32 flex flex-col text-white t:mt-40 d:ml-32 bg-slate-900">
       <img
         srcSet={`${TechnologyMobile} 375w, ${TechnologyTablet} 768w, ${TechnologyDesktop} 1400w`}
         sizes="(max-width: 768px) 375px, (max-width: 1064px) 768px, 1400px"

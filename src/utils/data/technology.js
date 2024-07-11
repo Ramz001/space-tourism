@@ -1,10 +1,10 @@
 import { nanoid } from 'nanoid'
-import imageLaunchVehicleLandscape from '../../assets/technology/image-launch-vehicle-landscape.jpg'
-import imageLaunchVehiclePortrait from '../../assets/technology/image-launch-vehicle-portrait.jpg'
-import imageSpaceCapsuleLandscape from '../../assets/technology/image-space-capsule-landscape.jpg'
-import imageSpaceCapsulePortrait from '../../assets/technology/image-space-capsule-portrait.jpg'
-import imageSpaceportLandcape from '../../assets/technology/image-spaceport-landscape.jpg'
-import imageSpaceportPortrait from '../../assets/technology/image-spaceport-portrait.jpg'
+import imageLaunchVehicleLandscape from '../../assets/technology/image-launch-vehicle-landscape.webp'
+import imageLaunchVehiclePortrait from '../../assets/technology/image-launch-vehicle-portrait.webp'
+import imageSpaceCapsuleLandscape from '../../assets/technology/image-space-capsule-landscape.webp'
+import imageSpaceCapsulePortrait from '../../assets/technology/image-space-capsule-portrait.webp'
+import imageSpaceportLandcape from '../../assets/technology/image-spaceport-landscape.webp'
+import imageSpaceportPortrait from '../../assets/technology/image-spaceport-portrait.webp'
 
 export const technologyData = [
   {

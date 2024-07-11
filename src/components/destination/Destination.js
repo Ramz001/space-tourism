@@ -1,6 +1,6 @@
-import DestinationDesktop from '../../assets/destination/background-destination-desktop.jpg'
-import DestinationTablet from '../../assets/destination/background-destination-tablet.jpg'
-import DestinationMobile from '../../assets/destination/background-destination-mobile.jpg'
+import DestinationDesktop from '../../assets/destination/background-destination-desktop.webp'
+import DestinationTablet from '../../assets/destination/background-destination-tablet.webp'
+import DestinationMobile from '../../assets/destination/background-destination-mobile.webp'
 import { useSelector } from 'react-redux'
 import '../../index.css'
 import { useState } from 'react'
@@ -19,7 +19,7 @@ function Destination() {
   return (
     <main
       className="relative flex min-h-svh flex-col bg-slate-900 px-8
-     pt-40 font-text text-white d:min-h-screen d:px-32 d:pt-[14.5%]"
+     pt-40 font-text text-white d:min-h-screen d:px-32 d:pt-[14%]"
     >
       <img
         srcSet={`${DestinationMobile} 375w, ${DestinationTablet} 768w, ${DestinationDesktop} 1400w`}
@@ -39,6 +39,7 @@ function Destination() {
           className="h-44 w-44 t:h-[19rem] t:w-[19rem] d:h-[28rem] d:w-[28rem]"
           src={image}
           alt={title}
+          title={title}
         />
         <div
           className="flex flex-col items-center justify-between gap-2 

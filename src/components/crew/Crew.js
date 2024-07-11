@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import CrewDesktop from '../../assets/crew/background-crew-desktop.jpg'
-import CrewTablet from '../../assets/crew/background-crew-tablet.jpg'
-import CrewMobile from '../../assets/crew/background-crew-mobile.jpg'
-import { useSelector, useDispatch } from 'react-redux'
+import CrewDesktop from '../../assets/crew/background-crew-desktop.webp'
+import CrewTablet from '../../assets/crew/background-crew-tablet.webp'
+import CrewMobile from '../../assets/crew/background-crew-mobile.webp'
+import { useSelector } from 'react-redux'
 import '../../index.css'
 import { useState } from 'react'
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import HeroDesktop from '../../assets/home/background-home-desktop.jpg'
-import HeroTablet from '../../assets/home/background-home-tablet.jpg'
-import HeroMobile from '../../assets/home/background-home-mobile.jpg'
+import HeroDesktop from '../../assets/home/background-home-desktop.webp'
+import HeroTablet from '../../assets/home/background-home-tablet.webp'
+import HeroMobile from '../../assets/home/background-home-mobile.webp'
 import '../../index.css'
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
     <main
       className="relative z-0 flex min-h-svh flex-col items-center gap-12 px-4
       pt-32 font-main t:min-h-screen t:gap-24 t:px-16 t:pt-[25%] d:flex-row 
-      d:justify-between d:px-32 d:pt-40"
+      d:justify-between d:px-32 d:pt-40 bg-slate-900"
     >
       <img
         srcSet={`${HeroMobile} 375w, ${HeroTablet} 768w, ${HeroDesktop} 1400w`}
